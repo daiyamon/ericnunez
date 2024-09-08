@@ -1,0 +1,235 @@
+body {
+    background-color: azure;
+    background-image: cover;
+   
+}
+
+#displayMain {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+}
+.bitcoin-bubble {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(52, 113, 228); /* Blue background */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.bitcoin-bubble:hover {
+  transform: scale(1.1);
+}
+
+.bitcoin-logo {
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+}
+#logo {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 5px solid #555;
+    
+}
+.image-cropper {
+    max-width: 100px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%; 
+}
+.social-links {
+  display: flex;
+  gap: 20px; /* Space between social links */
+  justify-content: center; /* Center the social links horizontally */
+  padding: 20px;
+}
+
+.social-link {
+  display: inline-block;
+  width: 40px; /* Width of the circular background */
+  height: 40px; /* Height of the circular background */
+  border-radius: 50%; /* Makes the element circular */
+  background-color: rgb(52, 113, 228); /* Background color of the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Remove underline from links */
+}
+
+.social-link img {
+  width: 20px; /* Size of the social media icon */
+  height: 20px; /* Size of the social media icon */
+  filter: invert(1); /* Optional: Inverts the color of the icon to white if your background is dark */
+}
+#title {
+    text-align: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+    
+    
+}
+
+#title h1 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    justify-content: left;
+    align-items: left;
+    font-weight: dark;
+    font-size: 26px;
+   
+  
+}
+
+#title h2 {
+    text-align: center;
+    font-family: sans-serif;
+    justify-content: left;
+    align-items: left;
+    font-size: 14px;
+    margin-top: -5%;
+    color: #54595F;
+    
+}
+
+#nameTitle {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+}
+
+
+
+.badges {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+margin-top: 0;
+}
+
+.badge {
+  
+    object-fit: cover;
+
+}
+
+.button {
+    background-color: white; /* Green */
+    
+    box-sizing: border-box;
+    border-radius: 12px;
+    color: blue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 30%;
+  }
+  .success {
+    border-color: #04AA6D;
+    color: green;
+  }
+  .success:hover {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Blue */
+  .info {
+    border-color: #2196F3;
+    color: dodgerblue
+  }
+  
+  .info:hover {
+    background: #2196F3;
+    color: white;
+  }
+  
+  /* Orange */
+  .warning {
+    border-color: #ff9800;
+    color: orange;
+  }
+  
+  .warning:hover {
+    background: #ff9800;
+    color: white;
+  }
+  
+  /* Red */
+  .danger {
+    border-color: #f44336;
+    color: red
+  }
+  
+  .danger:hover {
+    background: #f44336;
+    color: white;
+  }
+  
+  /* Gray */
+  .default {
+    border-color: #e7e7e7;
+    color: black;
+  }
+  
+  .default:hover {
+    background: #e7e7e7;
+  }
+#content {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    gap: 10px;
+    
+}
+
+@media (max-width:765px)  {
+
+    #title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #title h1 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    justify-content: left;
+    align-items: left;
+    font-weight: dark;
+    font-size: 26px;
+    }
+}
+@media (max-width: 600px) {
+  .bitcoin-bubble {
+      width: 40px;
+      height: 40px;
+  }
+
+  .bitcoin-logo {
+      width: 20px;
+      height: 20px;
+  }
+}

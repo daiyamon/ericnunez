@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Helping you achieve your dream life</title>
+  <link rel="icon" type="image/x-icon" href="../public/me.jpg">
+  <link rel="stylesheet" href="../styles/styles.css">
+
+  <style>
+    body {
+      background-color: azure;
+      background-image: cover;
+    }
+    /* Basic styling for the carousel */
+    .carousel {
+        position: relative;
+        width: 80%;
+        max-width: 800px;
+        margin: auto;
+        margin-top: 8%;
+        overflow: hidden;
+    }
+    .carousel-images a {
+            display: block;
+            width: 100%;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+    .carousel-images {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    .carousel-images img {
+        width: 100%;
+        flex-shrink: 0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .carousel-images img:hover {
+      transform: scale(1.1); /* Scale up the image by 10% */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add a shadow */
+    } 
+
+   
+
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border:none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 10;
+        border-radius: 50%;
+    }
+
+    .carousel-button.left {
+        left: 10px;
+    }
+
+    .carousel-button.right {
+        right: 10px;
+    }
+</style>
+
+  </head>
+
+  <body>
+    <div class="carousel">
+      <button class="carousel-button left" onclick="prevSlide()">❮</button>
+      <button class="carousel-button right" onclick="nextSlide()">❯</button>
+      <div class="carousel-images" id="carouselImages">
+          <!-- Add your images here -->
+          <a href="https://anltowing.com/" target="_blank" rel="noopener noreferrer"> <img src="../public/anltowing.png" alt="Project 1">   </a>
+          <a href="https://lofikid-daiyamon.vercel.app/" target="_blank" rel="noopener noreferrer">  <img src="../public/lofikid.png" alt="Project 2">      </a>
+          <a href="" target="_blank" rel="noopener noreferrer">   <img src="../public/image3.jpg" alt="Project 3">               </a>
+          
+          <!-- More images if needed -->
+      </div>
+  </div>
+
+
+
+  <script>
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.carousel-images img');
+        if (index >= slides.length) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = slides.length - 1;
+        } else {
+            currentIndex = index;
+        }
+        const offset = -currentIndex * 100;
+        document.getElementById('carouselImages').style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    // Auto-slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Initialize the first slide
+    showSlide(currentIndex);
+</script>
+
+  </body>
+  
+
+  </html>
